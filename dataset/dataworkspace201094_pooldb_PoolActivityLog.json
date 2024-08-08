@@ -1,0 +1,44 @@
+{
+	"name": "dataworkspace201094_pooldb_PoolActivityLog",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dataworkspace201094",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "TimeGenerated",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Category",
+				"type": "varchar"
+			},
+			{
+				"name": "OperationName",
+				"type": "varchar"
+			},
+			{
+				"name": "StatusCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CallerIpAddress",
+				"type": "varchar"
+			},
+			{
+				"name": "IdentityType",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "BlogDiagnostics"
+		}
+	}
+}
